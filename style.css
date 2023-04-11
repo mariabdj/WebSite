@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 10px;
+  margin: 10px 0px;
+}
+nav > ul {
+  display: flex;
+  margin: 0;
+  padding-left: 220px;
+  padding-right: 70px;
+}
+a {
+  ccolor: rgba(0, 0, 0, 0.674);
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 105px;
+  transition: 0.1s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+}
+a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+a:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  color: #20a36c;
+  transform: translateX(0);
+  transition-property: all;
+  transition-property: transform;
+}
+
+a:hover:before {
+  color: #20a36c;
+  border-color: #20a36c;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear 0.3s;
+}
+
+a:hover:after {
+  color: #20a36c;
+  border-color: #20a36c;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear 0.5s;
+}
+
+nav > img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: -50px;
+  top: -60px;
+}
+nav > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span > button {
+  color: #20a36c;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.1em;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+span > button:hover {
+  border: 1px solid white;
+}
+
+span > button:active {
+  box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+}
